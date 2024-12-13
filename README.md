@@ -25,12 +25,12 @@ O recurso de Spark Structured Streaming (readStream e writeStream) são consumid
 | <img src="images/postgresql_icon.png" alt="minio ico" style="width:200px; height:100%"> | **[PostgreSQL](https://jdbc.postgresql.org/download/)**| Banco de dados relacional (SGBD) de código aberto. Ele é conhecido por ser robusto, altamente extensível.|
 | <img src="images/pyspark_icon.png" alt="pyspark ico" style="width:200px; height:100%"> | **[PySpark](https://spark.apache.org/docs/latest/api/python/index.html)** | Interface Python para o Apache Spark, usada para processamento distribuído de grandes volumes de dados em cluster |
 | <img src="images/docker_icon.png" alt="docker ico" style="width:200px; height:100%"> | **[Docker](https://www.docker.com/get-started/)** | Plataforma para criar, distribuir e executar aplicações em contêineres isolados.|
-| <img src="images/podman_icon.png" alt="podman ico" style="width:200px; height:100%"> | **[Podman](https://podman.io/get-started)** | Alternativa para executar container em relação ao Docker. Porém consume menos recursos de máquina no desenvolvimento local ***(super recomendo!)*** :rocket:.|
+| <img src="images/podman_icon.png" alt="podman ico" style="width:200px; height:100%"> | **[Podman](https://podman.io/get-started)** | Alternativa para executar container em relação ao Docker. Consume menos recursos de máquina no desenvolvimento local ***(super recomendo!)*** :rocket:.|
 
 
 ## Como usar...
 
-1. **Instalar a imagem do PostgreSQL**
+1. **Instale imagem do PostgreSQL**
 
    Estando no diretório do projeto, com Docker:
    ```
@@ -41,7 +41,7 @@ O recurso de Spark Structured Streaming (readStream e writeStream) são consumid
    podman-compose up
    ```
 
-2. **Instale as bibliotecas**
+2. **Ambiente virtual**
 
    É recomendavel que faça a execução dentro do ambiente virtual do python.
    
@@ -61,16 +61,13 @@ O recurso de Spark Structured Streaming (readStream e writeStream) são consumid
    ```
 
 
-3. **Instale as bibliotecas**
+3. **Instale as bibliotecas do Python**
 
-   Estando no diretório do projeto, com pip:
-   ```
-   pip install -r requirements.txt
-   ```
-   ... ou Poetry:
-   ```
-   poetry install
-   ```
+   Estando no diretório do projeto, instale com pip ou Poetry:
+
+| Com pip | Com Poetry|
+|-----------|--------------|
+| ```pip install -r requirements.txt``` | ```poetry install```|
 
 3. **Execute a PIPELINE**
 
