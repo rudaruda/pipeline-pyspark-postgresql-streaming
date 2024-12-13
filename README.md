@@ -1,5 +1,5 @@
 # Desafio Engenharia de Dados
-Teste realizado para vaga de Engenharia de Dados
+Desafio realizado para vaga de Engenharia de Dados utilizando Python, PySpark e PostgreSQL.
 
 
 ### Como instalar
@@ -14,15 +14,25 @@ Teste realizado para vaga de Engenharia de Dados
 
 # Arquitetura dessa Solução
 ![elementos de arquitetura](./images/arquitetura.png)
+
 Localmente temos o Python e PySpark e PostgreSQL instalado com docker-compose para facilitar os testes. A conexão do Python com PostgreSQL acontece via biblioteca psycopg2_binary. E do PySpark com PostgreSQL acontece via JDBC "postgresql-42.7.3.jar".
 
 O recurso de Spark Structured Streaming (readStream e writeStream) são consumidos no arquivo `streaming.py` no diretório "app/dataIngest/".
+
+
+| :city_sunrise: |Aplicação| O que é|
+|-----|:-----:|-------------|
+| <img src="images/postgresql_icon.png" alt="minio ico" style="width:200px; height:100%"> | **[PostgreSQL](https://jdbc.postgresql.org/download/)**| Banco de dados relacional (SGBD) de código aberto. Ele é conhecido por ser robusto, altamente extensível.|
+| <img src="images/pyspark_icon.png" alt="pyspark ico" style="width:200px; height:100%"> | **[PySpark](https://spark.apache.org/docs/latest/api/python/index.html)** | Interface Python para o Apache Spark, usada para processamento distribuído de grandes volumes de dados em cluster |
+| <img src="images/docker_icon.png" alt="docker ico" style="width:200px; height:100%"> | **[Docker](https://www.docker.com/get-started/)** | Plataforma para criar, distribuir e executar aplicações em contêineres isolados.|
+| <img src="images/podman_icon.png" alt="podman ico" style="width:200px; height:100%"> | **[Podman](https://podman.io/get-started)** | Alternativa para executar container em relação ao Docker. Porém consume menos recursos de máquina no desenvolvimento local ***(super recomendo!)*** :rocket:.|
+
 
 ## Como usar...
 
 1. **Instalar a imagem do PostgreSQL**
 
-  Estando no diretório do projeto, com Docker:
+   Estando no diretório do projeto, com Docker:
    ```
    docker-compose up
    ```
