@@ -44,7 +44,7 @@ def armazenamento(spark, pstg_setup, df1:DataFrame, df2:DataFrame, df3:DataFrame
     stg.__enter__()
     stg.write_to_parquet(df1, f"{SRC_DIR}/../parquet-files/TransacoesCondominio")
     stg.write_to_parquet(df2, f"{SRC_DIR}/../parquet-files/MoradorTransacoes")
-    stg.write_to_parquet(df3, f"{SRC_DIR}/../TipoImovelTransacoes")
+    stg.write_to_parquet(df3, f"{SRC_DIR}/../parquet-files/TipoImovelTransacoes")
     stg.__exit__(None, None, None)
 
 
