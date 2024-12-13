@@ -3,13 +3,17 @@ Desafio realizado para vaga de Engenharia de Dados utilizando Python, PySpark e 
 
 
 ### Como instalar
+* Clone o projeto: 
+  ```
+  git@github.com:rudaruda/spl_eng_dados_teste.git
+  ```
 * Necessário ter Docker e Docker-compose (ou Podman + Podman Compose) instalado
 * Utilizar o comando `docker-compose up` ou `podman-compose up` no diretório do repositório
 
 
 #### Serviços instalados em container
   - **PostgrSQL**: http://localhost:5452/
-    > _user: `admin`, password: `password`_
+    > _user: `admin`, password: `admin`_
 
 
 # Arquitetura dessa Solução
@@ -32,20 +36,17 @@ O recurso de Spark Structured Streaming (readStream e writeStream) são consumid
 
 1. **Instale imagem do PostgreSQL**
 
-   Estando no diretório do projeto, com Docker:
-   ```
-   docker-compose up
-   ```
-   ... ou Podman:
-   ```
-   podman-compose up
-   ```
+   Estando no diretório do projeto, com **Docker** ou **Podman**:
+
+   | Docker | Podman |
+   |--------|--------|
+   | ```docker-compose up``` | ```podman-compose up``` |
 
 2. **Ambiente virtual**
 
    É recomendavel que faça a execução dentro do ambiente virtual do python.
    
-   O poetry faz isso de forma mais automatica com o comando:
+   O **Poetry** faz isso de forma mais automatica com o comando:
    ```
    poetry run python <file.py> <args>
    ```
@@ -55,7 +56,7 @@ O recurso de Spark Structured Streaming (readStream e writeStream) são consumid
    pip install poetry
    ```
 
-   O jeito tradicional ativar o ambiente virtual é com o comando:
+   O jeito tradicional de ativar o ambiente virtual é com o comando:
    ```
    source .venv/bin/activate
    ```
@@ -63,24 +64,21 @@ O recurso de Spark Structured Streaming (readStream e writeStream) são consumid
 
 3. **Instale as bibliotecas do Python**
 
-   Estando no diretório do projeto, instale com pip ou Poetry:
+   Estando no diretório do projeto, instale com **pip** ou **Poetry**:
 
-   | Com pip | Com Poetry|
+   | Com pip | Com Poetry |
    |-----------|--------------|
    | ```pip install -r requirements.txt``` | ```poetry install```|
 
 3. **Execute a PIPELINE**
 
    Estando no diretório do projeto, com Python:
-   ```
-   python app/main.py pipeline
-   ```
-   ... ou com Poetry:
-   ```
-   poetry run python app/main.py pipeline
-   ```
 
-   Esse comanado irá executar a pipeline completa: Ingestão > Tranformação > Armazenamento.
+   | Python | Python + Poetry|
+   |-------------|-----------|
+   | ```python app/main.py pipeline``` | ```poetry run python app/main.py pipeline``` |
+
+   Esse comanado irá executar a pipeline completa: Ingestão > Transformação > Armazenamento.
 
    Os dados transformados em **PARQUET** serão salvos no diretorio **parquet-files** na razi do projeto.
 
@@ -88,13 +86,10 @@ O recurso de Spark Structured Streaming (readStream e writeStream) são consumid
 
 3. **Execute o STREAMING**
    Estando no diretório do projeto, com Python:
-   ```
-   python app/dataIngest/streaming.py
-   ```
-   ... ou com Poetry:
-   ```
-   poetry run python app/dataIngest/streaming.py
-   ```
+
+   | Com pip | Com Poetry |
+   |-----------|--------------|
+   | ```python app/dataIngest/streaming.py``` |```poetry run python app/dataIngest/streaming.py``` |
 
    Para o streaming funcionar é preciso que haja arquivos no diretório **app/data-files-enter**.
    
