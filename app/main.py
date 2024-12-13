@@ -1,8 +1,6 @@
 import os
 import sys
 from pyspark.sql import SparkSession, DataFrame
-from pyspark.sql.types import StructType, StructField, StringType, IntegerType, ArrayType, MapType
-from pyspark.sql import functions as F
 
 from dataIngest import ingest
 from dataProcess import process

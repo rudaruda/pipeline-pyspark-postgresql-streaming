@@ -1,4 +1,4 @@
-# spl_eng_dados_teste
+# Desafio Engenharia de Dados
 Teste realizado para vaga de Engenharia de Dados
 
 
@@ -13,9 +13,10 @@ Teste realizado para vaga de Engenharia de Dados
 
 
 # Arquitetura dessa Solução
-![elementos de arquitetura](./images/arquitetura_s3_iceberg_trino.png)
+![elementos de arquitetura](./images/arquitetura.png)
+Localmente temos o Python e PySpark e PostgreSQL instalado com docker-compose para facilitar os testes. A conexão do Python com PostgreSQL acontece via biblioteca psycopg2_binary. E do PySpark com PostgreSQL acontece via JDBC "postgresql-42.7.3.jar".
 
-
+O recurso de Spark Structured Streaming (readStream e writeStream) são consumidos no arquivo `streaming.py` no diretório "app/dataIngest/".
 
 ## Como usar...
 

@@ -2,8 +2,7 @@ import os
 import shutil
 from pyspark.sql import SparkSession, DataFrame
 from pyspark.sql.types import StructType, StructField, StringType, IntegerType, DateType, DecimalType
-from pyspark.sql.functions import col, input_file_name
-import psycopg2
+from pyspark.sql.functions import input_file_name
 
 # Schema dos Dados
 transacoes = StructType([
