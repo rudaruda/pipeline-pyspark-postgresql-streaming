@@ -1,3 +1,11 @@
+Ver: 
+- [Script pipeline](#como-usar)
+- [Arquitetura Proposta](#arquitetura-proposta)
+- [Sobre documentação](#documentação)
+- [Sobre monitoramento](#monitoramento)
+
+-----
+
 # Desafio Engenharia de Dados
 Esse foi um desafio realizado para vaga de Engenharia de Dados utilizando Python, PySpark (+Streaming) e PostgreSQL.
 
@@ -31,7 +39,7 @@ O recurso de Spark Structured Streaming (readStream e writeStream) são consumid
 | <img src="images/podman_icon.png" alt="podman ico" style="width:200px; height:100%"> | **[Podman](https://podman.io/get-started)** | Alternativa para executar container em relação ao Docker. Consome menos recursos de máquina no desenvolvimento local ***(super recomendo!)*** :rocket:.|
 
 
-## Como usar...
+# Como usar...
 
 1. **Instale imagem do PostgreSQL**
 
@@ -117,7 +125,7 @@ Por último temos a cama de Storage que persiste os dados "transformados" em arq
 - **Data Processing Layer**: Processamento de dados usando Spark.
 - **Data Serving Layer**: Exposição de dados processados para análise.)
 
-> ##### Resposta
+> ##### Resposta:
 
 ![arquitetura proposta](./images/arquitetura_proposta.png)
 
