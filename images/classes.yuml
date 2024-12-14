@@ -1,0 +1,22 @@
+// {type:activity}
+
+(main\(\))->(dataIngest)
+(main\(\))->(dataTransform)
+(main\(\))->(dataStorage)
+
+(dataStorage)->(write_to_parquet)
+
+(dataTransform)->(CondominioTransacoesTotal)
+(dataTransform)->(MoradorTransacoesTotal)
+(dataTransform)->(TipoImovelTransacoesDia)
+
+(CondominioTransacoesTotal)->(write_to_parquet)
+(MoradorTransacoesTotal)->(write_to_parquet)
+(TipoImovelTransacoesDia)->(write_to_parquet)
+
+(write_to_parquet)->(file: PARQUET)
+
+(dataIngest)->(table_recreate\(\))->(table_create_all\(\))->(table_create\(\))
+(dataIngest)->(ingest_csv_to_postgres\(\))
+(ingest_csv_to_postgres\(\))->(file: JSON)
+(ingest_csv_to_postgres\(\))->(PostgreSQL)
