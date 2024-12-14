@@ -4,7 +4,7 @@ Esse foi um desafio realizado para vaga de Engenharia de Dados utilizando Python
 ### Como instalar
 * Clone o projeto: 
   ```
-  git@github.com:rudaruda/spl_eng_dados_teste.git
+  https://github.com/rudaruda/pipeline-pyspark-postgresql-streaming.git
   ```
 * Necessário ter Docker e Docker-compose (ou Podman + Podman Compose) instalado
 * Utilizar o comando `docker-compose up` ou `podman-compose up` no diretório do repositório
