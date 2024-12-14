@@ -152,7 +152,7 @@ Ainda no **README do Github** importante estar o link dos épicos do **Jira**, e
 
 **JIRA** para documentar cada ação evolutiva sobre o processo da pipeline, como a inclusão ou remoção de DAGs.
 
-E sobre o **DBML** eu faria uso do **DBdocs** que ajuda muito a registrar a explicação dos objetos de dados com o negócio.
+Percebo que o **DBML** é cada vez mais relevante na documentação de dados, eu faria uso do **DBdocs** de forma corporativa que ajuda muito a registrar a explicação dos objetos de dados com o negócio.
 
 **Swagger** para alguns processos de pipeline e consulta de dados, vejo que pode fazer sentido contruir uma saída em API para ter o Swagger em mãos, por ele disponiliza uma documentação dinamica e prática ao mesmo tempo.
 
