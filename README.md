@@ -1,8 +1,8 @@
-Ver: 
+Índice: 
 - [Script pipeline](#como-usar)
 - [Arquitetura Proposta](#arquitetura-proposta)
-- [Sobre documentação](#documentação)
-- [Sobre monitoramento](#monitoramento)
+- [Sobre Documentação](#documentação)
+- [Sobre Monitoramento](#monitoramento)
 
 -----
 
@@ -17,11 +17,25 @@ Esse foi um desafio realizado para vaga de Engenharia de Dados utilizando Python
 * Necessário ter Docker e Docker-compose (ou Podman + Podman Compose) instalado
 * Utilizar o comando `docker-compose up` ou `podman-compose up` no diretório do repositório
 
-
 #### Serviços instalados em container
   - **PostgrSQL**: http://localhost:5452/
     > _user: `admin`, password: `admin`_
 
+### Estrutura principal do projeto
+    root
+    ├── docker-compose.yml
+    ├── requirements.txt
+    └── app
+        ├── main.py
+        ├── dataIngest
+        │   └── ingest.py
+        │   └── streaming.py
+        ├── dataProgress
+        │   └── progress.py
+        ├── dataStorage
+        │   └── storage.py
+        └── jar-files
+            └── postgresql-42.7.3.jar
 
 # Arquitetura dessa Solução
 ![elementos de arquitetura](./images/arquitetura.png)
